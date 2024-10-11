@@ -5,7 +5,7 @@ FROM golang:1.22 AS build
 WORKDIR /app
 
 # 3. Копируем все файлы проекта в контейнер
-COPY . .
+COPY docker .
 
 # 4. Загружаем зависимости (модули Go)
 RUN go mod download
